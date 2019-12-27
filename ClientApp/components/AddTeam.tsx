@@ -18,12 +18,12 @@ export class AddTeam extends React.Component<RouteComponentProps<any>, AddTeamDa
             fetch('api/Team/Details/' + empid)
                 .then(response => response.json() as Promise<TeamData>)
                 .then(data => {
-                    this.setState({ title: "Edit", loading: false, empData: data });
+                    this.setState({ title: "Editar", loading: false, empData: data });
                 });
         }
         // This will set state for Add team  
         else {
-            this.state = { title: "Create", loading: false, teamList: [], empData: new TeamData };
+            this.state = { title: "Cadastrar Novo", loading: false, teamList: [], empData: new TeamData };
         }
         // This binding is necessary to make "this" work in the callback  
         this.handleSave = this.handleSave.bind(this);
@@ -35,7 +35,7 @@ export class AddTeam extends React.Component<RouteComponentProps<any>, AddTeamDa
             : this.renderCreateForm(this.state.teamList);
         return <div>
             <h1>{this.state.title}</h1>
-            <h3>Team</h3>
+            <h3>Times</h3>
             <hr />
             {contents}
         </div>;
@@ -79,14 +79,14 @@ export class AddTeam extends React.Component<RouteComponentProps<any>, AddTeamDa
                     <input type="hidden" name="teamId" value={this.state.empData.teamId} />
                 </div>
                 < div className="form-group row" >
-                    <label className=" control-label col-md-12" htmlFor="TeamName">TeamName</label>
+                    <label className=" control-label col-md-12" htmlFor="TeamName">Nome do Time</label>
                     <div className="col-md-4">
                         <input className="form-control" type="text" name="teamName" defaultValue={this.state.empData.teamName} required />
                     </div>
                 </div >
                 <div className="form-group">
-                    <button type="submit" className="btn btn-default">Save</button>
-                    <button className="btn" onClick={this.handleCancel}>Cancel</button>
+                    <button type="submit" className="btn btn-primary">Salvar</button>
+                    <button className="btn" onClick={this.handleCancel}>Cancelar</button>
                 </div >
             </form >
         )

@@ -23,12 +23,12 @@ export class AddPlayer extends React.Component<RouteComponentProps<any>, AddPlay
             fetch('api/Player/Details/' + empid)
                 .then(response => response.json() as Promise<PlayerData>)
                 .then(data => {
-                    this.setState({ title: "Edit", loading: false, empData: data });
+                    this.setState({ title: "Editar", loading: false, empData: data });
                 });
         }
         // This will set state for Add player  
         else {
-            this.state = { title: "Create", loading: false, teamList: [], empData: new PlayerData };
+            this.state = { title: "Cadastrar Novo", loading: false, teamList: [], empData: new PlayerData };
         }
         // This binding is necessary to make "this" work in the callback  
         this.handleSave = this.handleSave.bind(this);
@@ -40,7 +40,7 @@ export class AddPlayer extends React.Component<RouteComponentProps<any>, AddPlay
             : this.renderCreateForm(this.state.teamList);
         return <div>
             <h1>{this.state.title}</h1>
-            <h3>Player</h3>
+            <h3>Jogador</h3>
             <hr />
             {contents}
         </div>;
@@ -83,16 +83,16 @@ export class AddPlayer extends React.Component<RouteComponentProps<any>, AddPlay
                     <input type="hidden" name="playerId" value={this.state.empData.playerId} />
                 </div>
                 < div className="form-group row" >
-                    <label className=" control-label col-md-12" htmlFor="Name">Name</label>
+                    <label className=" control-label col-md-12" htmlFor="Name">Nome</label>
                     <div className="col-md-4">
                         <input className="form-control" type="text" name="name" defaultValue={this.state.empData.name} required />
                     </div>
                 </div >
                 <div className="form-group row">
-                    <label className="control-label col-md-12" htmlFor="Team">Team</label>
+                    <label className="control-label col-md-12" htmlFor="Team">Time</label>
                     <div className="col-md-4">
                         <select className="form-control" data-val="true" name="Team" defaultValue={this.state.empData.team} required>
-                            <option value="">-- Select Team --</option>
+                            <option value="">-- Escolha o Time --</option>
                             {teamList.map(team =>
                                 <option key={team.teamId} value={team.teamName}>{team.teamName}</option>
                             )}
@@ -100,8 +100,8 @@ export class AddPlayer extends React.Component<RouteComponentProps<any>, AddPlay
                     </div>
                 </div >
                 <div className="form-group">
-                    <button type="submit" className="btn btn-default">Save</button>
-                    <button className="btn" onClick={this.handleCancel}>Cancel</button>
+                    <button type="submit" className="btn btn-primary">Salvar</button>
+                    <button className="btn" onClick={this.handleCancel}>Cancelar</button>
                 </div >
             </form >
         )

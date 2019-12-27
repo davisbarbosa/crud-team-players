@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "321a26c0fc98c9db12ed"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "b0ac745c28009d18ac1b"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -1310,7 +1310,7 @@ exports = module.exports = __webpack_require__(68)(undefined);
 
 
 // module
-exports.push([module.i, ".main-nav li .glyphicon {\r\n    margin-right: 10px;\r\n}\r\n\r\n/* Highlighting rules for nav menu items */\r\n.main-nav li a.active,\r\n.main-nav li a.active:hover,\r\n.main-nav li a.active:focus {\r\n    background-color: #4189C7;\r\n    color: white;\r\n}\r\n\r\n/* Keep the nav menu independent of scrolling and on top of other items */\r\n.main-nav {\r\n    position: fixed;\r\n    top: 0;\r\n    left: 0;\r\n    right: 0;\r\n    z-index: 1;\r\n}\r\n\r\n@media (max-width: 767px) {\r\n    /* On small screens, the nav menu spans the full width of the screen. Leave a space for it. */\r\n    body {\r\n        padding-top: 50px;\r\n    }\r\n}\r\n\r\n@media (min-width: 768px) {\r\n    /* On small screens, convert the nav menu to a vertical sidebar */\r\n    .main-nav {\r\n        height: 100%;\r\n        width: calc(25% - 20px);\r\n    }\r\n    .main-nav .navbar {\r\n        border-radius: 0px;\r\n        border-width: 0px;\r\n        height: 100%;\r\n    }\r\n    .main-nav .navbar-header {\r\n        float: none;\r\n    }\r\n    .main-nav .navbar-collapse {\r\n        border-top: 1px solid #444;\r\n        padding: 0px;\r\n    }\r\n    .main-nav .navbar ul {\r\n        float: none;\r\n    }\r\n    .main-nav .navbar li {\r\n        float: none;\r\n        font-size: 15px;\r\n        margin: 6px;\r\n    }\r\n    .main-nav .navbar li a {\r\n        padding: 10px 16px;\r\n        border-radius: 4px;\r\n    }\r\n    .main-nav .navbar a {\r\n        /* If a menu item's text is too long, truncate it */\r\n        width: 100%;\r\n        white-space: nowrap;\r\n        overflow: hidden;\r\n        text-overflow: ellipsis;\r\n    }\r\n}\r\n", ""]);
+exports.push([module.i, "a {\r\n\tcursor: pointer;\r\n}\r\n.main-nav li .glyphicon {\r\n    margin-right: 10px;\r\n}\r\n\r\n/* Highlighting rules for nav menu items */\r\n.main-nav li a.active,\r\n.main-nav li a.active:hover,\r\n.main-nav li a.active:focus {\r\n    background-color: #4189C7;\r\n    color: white;\r\n}\r\n\r\n/* Keep the nav menu independent of scrolling and on top of other items */\r\n.main-nav {\r\n    position: fixed;\r\n    top: 0;\r\n    left: 0;\r\n    right: 0;\r\n    z-index: 1;\r\n}\r\n\r\n@media (max-width: 767px) {\r\n    /* On small screens, the nav menu spans the full width of the screen. Leave a space for it. */\r\n    body {\r\n        padding-top: 50px;\r\n    }\r\n}\r\n\r\n@media (min-width: 768px) {\r\n    /* On small screens, convert the nav menu to a vertical sidebar */\r\n    .main-nav {\r\n        height: 100%;\r\n        width: calc(25% - 20px);\r\n    }\r\n    .main-nav .navbar {\r\n        border-radius: 0px;\r\n        border-width: 0px;\r\n        height: 100%;\r\n    }\r\n    .main-nav .navbar-header {\r\n        float: none;\r\n    }\r\n    .main-nav .navbar-collapse {\r\n        border-top: 1px solid #444;\r\n        padding: 0px;\r\n    }\r\n    .main-nav .navbar ul {\r\n        float: none;\r\n    }\r\n    .main-nav .navbar li {\r\n        float: none;\r\n        font-size: 15px;\r\n        margin: 6px;\r\n    }\r\n    .main-nav .navbar li a {\r\n        padding: 10px 16px;\r\n        border-radius: 4px;\r\n    }\r\n    .main-nav .navbar a {\r\n        /* If a menu item's text is too long, truncate it */\r\n        width: 100%;\r\n        white-space: nowrap;\r\n        overflow: hidden;\r\n        text-overflow: ellipsis;\r\n    }\r\n}\r\n", ""]);
 
 // exports
 
@@ -2567,10 +2567,9 @@ var FetchPlayer = (function (_super) {
                 __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("em", null, "Loading..."))
             : this.renderPlayerTable(this.state.empList);
         return __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", null,
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("h1", null, "Player Data"),
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("p", null, "This component demonstrates fetching Player data from the server."),
+            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("h1", null, "Jogadores"),
             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("p", null,
-                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["Link"], { to: "/addplayer" }, "Create New")),
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["Link"], { to: "/addplayer" }, "Cadastrar Novo Jogador")),
             contents);
     };
     // Handle Delete request for an player  
@@ -2600,19 +2599,21 @@ var FetchPlayer = (function (_super) {
             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("thead", null,
                 __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("tr", null,
                     __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("th", null),
-                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("th", null, "PlayerId"),
-                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("th", null, "Name"),
-                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("th", null, "Team"))),
+                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("th", null, "Nome"),
+                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("th", null, "Time"),
+                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("th", null, "Editar"),
+                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("th", null, "Remover"))),
             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("tbody", null, empList.map(function (emp) {
                 return __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("tr", { key: emp.playerId },
                     __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("td", null),
-                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("td", null, emp.playerId),
                     __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("td", null, emp.name),
                     __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("td", null, emp.team),
                     __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("td", null,
-                        __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("a", { className: "action", onClick: function (id) { return _this.handleEdit(emp.playerId); } }, "Edit"),
-                        "  |",
-                        __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("a", { className: "action", onClick: function (id) { return _this.handleDelete(emp.playerId); } }, "Delete")));
+                        __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("a", { className: "action", onClick: function (id) { return _this.handleEdit(emp.playerId); } },
+                            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("i", { className: "glyphicon glyphicon-pencil" }))),
+                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("td", null,
+                        __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("a", { className: "action", onClick: function (id) { return _this.handleDelete(emp.playerId); } },
+                            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("i", { className: "glyphicon glyphicon-remove" }))));
             })));
     };
     return FetchPlayer;
@@ -2677,10 +2678,9 @@ var FetchTeam = (function (_super) {
                 __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("em", null, "Loading..."))
             : this.renderTeamTable(this.state.empList);
         return __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", null,
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("h1", null, "Team Data"),
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("p", null, "This component demonstrates fetching Team data from the server."),
+            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("h1", null, "Times"),
             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("p", null,
-                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["Link"], { to: "/addteam" }, "Create New")),
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["Link"], { to: "/addteam" }, "Cadastrar Novo Time")),
             contents);
     };
     // Handle Delete request for an team  
@@ -2710,18 +2710,19 @@ var FetchTeam = (function (_super) {
             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("thead", null,
                 __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("tr", null,
                     __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("th", null),
-                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("th", null, "TeamId"),
-                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("th", null, "Name"),
-                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("th", null, "Team"))),
+                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("th", null, "Nome do Time"),
+                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("th", null, "Editar"),
+                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("th", null, "Remover"))),
             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("tbody", null, empList.map(function (emp) {
                 return __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("tr", { key: emp.teamId },
                     __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("td", null),
-                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("td", null, emp.teamId),
                     __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("td", null, emp.teamName),
                     __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("td", null,
-                        __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("a", { className: "action", onClick: function (id) { return _this.handleEdit(emp.teamId); } }, "Edit"),
-                        "  |",
-                        __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("a", { className: "action", onClick: function (id) { return _this.handleDelete(emp.teamId); } }, "Delete")));
+                        __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("a", { className: "action", onClick: function (id) { return _this.handleEdit(emp.teamId); } },
+                            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("i", { className: "glyphicon glyphicon-pencil" }))),
+                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("td", null,
+                        __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("a", { className: "action", onClick: function (id) { return _this.handleDelete(emp.teamId); } },
+                            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("i", { className: "glyphicon glyphicon-remove" }))));
             })));
     };
     return FetchTeam;
@@ -8024,11 +8025,11 @@ var AddPlayer = (function (_super) {
             fetch('api/Player/Details/' + empid)
                 .then(function (response) { return response.json(); })
                 .then(function (data) {
-                _this.setState({ title: "Edit", loading: false, empData: data });
+                _this.setState({ title: "Editar", loading: false, empData: data });
             });
         }
         else {
-            _this.state = { title: "Create", loading: false, teamList: [], empData: new __WEBPACK_IMPORTED_MODULE_1__FetchPlayer__["b" /* PlayerData */] };
+            _this.state = { title: "Cadastrar Novo", loading: false, teamList: [], empData: new __WEBPACK_IMPORTED_MODULE_1__FetchPlayer__["b" /* PlayerData */] };
         }
         // This binding is necessary to make "this" work in the callback  
         _this.handleSave = _this.handleSave.bind(_this);
@@ -8042,7 +8043,7 @@ var AddPlayer = (function (_super) {
             : this.renderCreateForm(this.state.teamList);
         return __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", null,
             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("h1", null, this.state.title),
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("h3", null, "Player"),
+            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("h3", null, "Jogador"),
             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("hr", null),
             contents);
     };
@@ -8082,20 +8083,20 @@ var AddPlayer = (function (_super) {
             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "form-group row" },
                 __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { type: "hidden", name: "playerId", value: this.state.empData.playerId })),
             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "form-group row" },
-                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("label", { className: " control-label col-md-12", htmlFor: "Name" }, "Name"),
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("label", { className: " control-label col-md-12", htmlFor: "Name" }, "Nome"),
                 __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "col-md-4" },
                     __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { className: "form-control", type: "text", name: "name", defaultValue: this.state.empData.name, required: true }))),
             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "form-group row" },
-                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("label", { className: "control-label col-md-12", htmlFor: "Team" }, "Team"),
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("label", { className: "control-label col-md-12", htmlFor: "Team" }, "Time"),
                 __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "col-md-4" },
                     __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("select", { className: "form-control", "data-val": "true", name: "Team", defaultValue: this.state.empData.team, required: true },
-                        __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("option", { value: "" }, "-- Select Team --"),
+                        __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("option", { value: "" }, "-- Escolha o Time --"),
                         teamList.map(function (team) {
                             return __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("option", { key: team.teamId, value: team.teamName }, team.teamName);
                         })))),
             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "form-group" },
-                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("button", { type: "submit", className: "btn btn-default" }, "Save"),
-                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("button", { className: "btn", onClick: this.handleCancel }, "Cancel"))));
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("button", { type: "submit", className: "btn btn-primary" }, "Salvar"),
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("button", { className: "btn", onClick: this.handleCancel }, "Cancelar"))));
     };
     return AddPlayer;
 }(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]));
@@ -8137,11 +8138,11 @@ var AddTeam = (function (_super) {
             fetch('api/Team/Details/' + empid)
                 .then(function (response) { return response.json(); })
                 .then(function (data) {
-                _this.setState({ title: "Edit", loading: false, empData: data });
+                _this.setState({ title: "Editar", loading: false, empData: data });
             });
         }
         else {
-            _this.state = { title: "Create", loading: false, teamList: [], empData: new __WEBPACK_IMPORTED_MODULE_1__FetchTeam__["b" /* TeamData */] };
+            _this.state = { title: "Cadastrar Novo", loading: false, teamList: [], empData: new __WEBPACK_IMPORTED_MODULE_1__FetchTeam__["b" /* TeamData */] };
         }
         // This binding is necessary to make "this" work in the callback  
         _this.handleSave = _this.handleSave.bind(_this);
@@ -8155,7 +8156,7 @@ var AddTeam = (function (_super) {
             : this.renderCreateForm(this.state.teamList);
         return __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", null,
             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("h1", null, this.state.title),
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("h3", null, "Team"),
+            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("h3", null, "Times"),
             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("hr", null),
             contents);
     };
@@ -8196,12 +8197,12 @@ var AddTeam = (function (_super) {
             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "form-group row" },
                 __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { type: "hidden", name: "teamId", value: this.state.empData.teamId })),
             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "form-group row" },
-                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("label", { className: " control-label col-md-12", htmlFor: "TeamName" }, "TeamName"),
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("label", { className: " control-label col-md-12", htmlFor: "TeamName" }, "Nome do Time"),
                 __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "col-md-4" },
                     __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { className: "form-control", type: "text", name: "teamName", defaultValue: this.state.empData.teamName, required: true }))),
             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "form-group" },
-                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("button", { type: "submit", className: "btn btn-default" }, "Save"),
-                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("button", { className: "btn", onClick: this.handleCancel }, "Cancel"))));
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("button", { type: "submit", className: "btn btn-primary" }, "Salvar"),
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("button", { className: "btn", onClick: this.handleCancel }, "Cancelar"))));
     };
     return AddTeam;
 }(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]));
@@ -8237,9 +8238,9 @@ var Home = (function (_super) {
     }
     Home.prototype.render = function () {
         return __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", null,
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("h1", null, "Ol\uFFFD,"),
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("p", null, "No menu ao lado voc\uFFFD pode, ver e cadastar os Times e Jogadores."),
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("p", null, "Ap\uFFFDs cadastras no m\uFFFDnimo 2 times e cada um deles precisa ter no m\uFFFDnimo 5 jogadores cadastrados."));
+            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("h1", null, "Ol\u00E1,"),
+            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("p", null, "No menu ao lado voc\u00EA pode, ver e cadastar os Times e Jogadores."),
+            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("p", null, "Ap\u00F3s cadastras no m\u00EDnimo 2 times e cada um deles precisa ter no m\u00EDnimo 5 jogadores cadastrados."));
     };
     return Home;
 }(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]));
@@ -8335,12 +8336,12 @@ var NavMenu = (function (_super) {
                                 " Home")),
                         __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("li", null,
                             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["NavLink"], { to: '/fetchplayer', exact: true, activeClassName: 'active' },
-                                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("span", { className: 'glyphicon glyphicon-th-list' }),
-                                " Fetch player")),
+                                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("span", { className: 'glyphicon glyphicon-user' }),
+                                " Jogadores")),
                         __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("li", null,
                             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["NavLink"], { to: '/fetchteam', activeClassName: 'active' },
                                 __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("span", { className: 'glyphicon glyphicon-th-list' }),
-                                " Fetch team"))))));
+                                " Times"))))));
     };
     return NavMenu;
 }(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]));
