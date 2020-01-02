@@ -8,11 +8,12 @@ namespace MvGame.Models
     public class TeamDAL
     {
         game_dbContext db = new game_dbContext();
+
         public IEnumerable<TblTeams> GetAllTeams()
         {
             try
             {
-                return db.TblTeams.ToList();
+                return db.TblTeams.OrderBy(n => n.TeamName).ToList();
             }
             catch
             {
@@ -74,6 +75,15 @@ namespace MvGame.Models
             {
                 throw;
             }
+        }
+
+        //To Get the list of Playable teams 
+        public List<TblTeams> GetPlayableTeams()
+        {
+            game_dbContext context = new game_dbContext();
+            IQueryable<TblTeams> team = context.TblTeams.FromSqlRaw($"SELECT tblTeams.TeamID,tblTeams.TeamName FROM tblTeams JOIN tblPlayer ON tblTeams.TeamName = tblPlayer.team GROUP BY tblTeams.TeamID, tblTeams.TeamName HAVING COUNT(tblPlayer.team) >= 5");
+            List<TblTeams> lstTeam = team.ToList();
+            return lstTeam;
         }
     }
 }

@@ -12,7 +12,7 @@ namespace MvGame.Models
         {
             try
             {
-                return db.TblPlayer.ToList();
+                return db.TblPlayer.OrderBy(n => n.Team).ThenBy(x => x.Name).ToList();
             }
             catch
             {

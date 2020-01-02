@@ -39,5 +39,11 @@ namespace MvGame.Controllers
         {
             return objteam.DeleteTeam(id);
         }
+        [HttpGet]
+        [Route("api/Player/GetPlayableTeams")]
+        public IEnumerable<TblTeams> Details()
+        {
+            return objteam.GetPlayableTeams();
+        }
     }
 }

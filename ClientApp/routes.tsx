@@ -6,6 +6,7 @@ import { FetchPlayer } from './components/FetchPlayer';
 import { AddPlayer } from './components/AddPlayer';
 import { FetchTeam } from './components/FetchTeam';
 import { AddTeam } from './components/AddTeam';
+import { FetchPlayableTeams } from './components/FetchPlayableTeams';
 
 export const routes = <Layout>
     <Route exact path='/' component={Home} />  
@@ -15,5 +16,6 @@ export const routes = <Layout>
     <Route path='/fetchteam' component={FetchTeam} />
     <Route path='/addteam' component={AddTeam} />
     <Route path='/team/edit/:empid' component={AddTeam} />
+    <Route path='/fetchplayableteams' component={FetchPlayableTeams} />
 
 </Layout>;

@@ -33,6 +33,7 @@
     <None Remove="ClientApp\components\AddPlayer.tsx" />
     <None Remove="ClientApp\components\AddPlayer.tsx" />
     <None Remove="ClientApp\components\AddTeam.tsx" />
+    <None Remove="ClientApp\components\FetchPlayableTeams.tsx" />
     <None Remove="ClientApp\components\FetchPlayer - Cópia.tsx" />
     <None Remove="ClientApp\components\FetchPlayer.tsx" />
     <None Remove="ClientApp\components\FetchPlayer.tsx" />
